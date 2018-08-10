@@ -2,7 +2,7 @@ class Dot {
   // Public
 
   constructor() {
-    this.pos = [300, 595]
+    this.pos = [canvasW / 2, canvasH - 15]
     this.vel = [0, 0]
     this.acc = [0, 0]
 
@@ -33,7 +33,7 @@ class Dot {
     let dy = this.pos[1] - goaly
 
     // Mark as dead or reached goal if needed
-    if (this.pos[0] < 5 || this.pos[1] < 5 || this.pos[0] > 595 || this.pos[1] > 595) {
+    if (this.pos[0] < 5 || this.pos[1] < 5 || this.pos[0] > canvasW - 5 || this.pos[1] > canvasH - 5) {
       this.alive = false
     } else if (dx < 5 && dx > -5 && dy < 5 && dy > -5) {
       this.reachedGoal = true
@@ -42,7 +42,6 @@ class Dot {
     // If still can move, move
     if (this.alive && !this.reachedGoal) {
       this.move()
-      this.brain.age += 1
     }
   }
 
@@ -50,7 +49,7 @@ class Dot {
     // Calculate the fitness of this dot
 
     if (this.reachedGoal) {
-      return 1 + 9999999999.0 / this.brain.age
+      return 1 + 9999999999.0 / frameCount
     } else {
       let deltaX = Math.pow(goalx - this.pos[0], 2)
       let deltaY = Math.pow(goaly - this.pos[1], 2)

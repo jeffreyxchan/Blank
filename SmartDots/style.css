@@ -1,0 +1,45 @@
+body {
+  text-align: center;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #00629b;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.page-wrapper {
+  max-width: 600px;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+#sketch-holder {
+  display: inline-block;
+  margin: 0 auto;
+}

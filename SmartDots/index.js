@@ -1,13 +1,19 @@
-// let population = new Population(10) // create a population with 1000 members
-
 let goalx = 300
 let goaly = 5
+
+let maxCanvasW = 600
+let canvasW = 0
+let canvasH = 600
 
 let p = new Population(1000)
 
 function setup() {
+  canvasW = Math.min(windowWidth - 10, maxCanvasW)
+  goalx = canvasW / 2
+
   // Draw canvas
-  createCanvas(600, 600)
+  let c = createCanvas(canvasW, canvasH)
+  c.parent('sketch-holder')
 }
 
 function draw() {
@@ -19,6 +25,7 @@ function draw() {
   if (p.allDead()) {
     p.naturalSelection()
     p.mutatePopulation()
+    document.getElementById('generation').innerHTML = 'Generation: ' + p.gen
   } else {
     p.update()
     p.draw()

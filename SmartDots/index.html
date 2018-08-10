@@ -1,20 +1,35 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>Smart Dots - Blank</title>
-  <meta charset='utf-8' />
+    <title>Smart Dots - Blank</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- P5 -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js'></script>
+    <!-- P5 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js'></script>
 
-  <!-- Class Definitions -->
-  <script src='./classes/Brain.js'></script>
-  <script src='./classes/Dot.js'></script>
-  <script src='./classes/Population.js'></script>
+    <!-- Class Definitions -->
+    <script src='./classes/Brain.js'></script>
+    <script src='./classes/Dot.js'></script>
+    <script src='./classes/Population.js'></script>
 
-  <!-- Main Entry Point -->
-  <script src='./index.js'></script>
+    <!-- Main Entry Point -->
+    <script src='./index.js'></script>
+
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='./style.css' />
 </head>
 <body>
+    <div class='page-wrapper'>
+        <h1 style='text-align: center'>Smart Dots</h1>
+        <h3 id="generation" style='text-align: left;'>Generation: 1</h3>
+        <div id="sketch-holder"></div>
+        <p style='text-align: left;'>In this game, the player starts off as a dot at the bottom of the screen.
+          The goal is to get to the red dot at the top. This graphic shows how an AI learning how to play this game.
+          You can see that as it evolves, it eventually learns how to get to the goal faster. The green dot in every generation
+          represents the best dot of the last generation.</p>
+        <p><a href='https://jeffreyxchan.github.io/Blank/SmartDots/'>Check me out on Github!</a></p>
+    </div>
 </body>
 </html>

@@ -43,7 +43,6 @@ class Population {
   naturalSelection() {
     // Gets the next generation of dots
     this.gen += 1
-    console.log('Generation: ', this.gen)
 
     let newDots = []
 

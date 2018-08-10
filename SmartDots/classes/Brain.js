@@ -5,8 +5,6 @@ class Brain {
     this.stepIndex = 0
     this.totalSteps = numSteps
 
-    this.age = 0
-
     this.steps = []
     this.randomizeSteps()
   }
